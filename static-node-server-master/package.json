@@ -1,0 +1,31 @@
+{
+  "name": "static-node-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "DEBUG=static-node-server:* node index.js",
+    "gitsync": "DEBUG=static-node-server:git-sync node git-sync.js",
+    "postinstall": "DEBUG=* yarn run gitsync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VikramTiwari/static-node-server.git"
+  },
+  "author": "Vikram Tiwari <vikramtheone1@gmail.com> (http://vikramtiwari.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VikramTiwari/static-node-server/issues"
+  },
+  "homepage": "https://github.com/VikramTiwari/static-node-server#readme",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "debug": "^2.6.3",
+    "express": "5.0.0-alpha.2",
+    "fs-extra": "^2.1.2",
+    "helmet": "^3.5.0",
+    "nodegit": "^0.18.0"
+  }
+}
